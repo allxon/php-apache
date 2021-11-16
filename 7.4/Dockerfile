@@ -1,4 +1,4 @@
-FROM php:7.4.24-apache
+FROM php:7.4.25-apache
 
 RUN apt-get update &&\
     apt-get install -y libmcrypt-dev libpq-dev libpng-dev libxslt-dev cron jq logrotate unzip vim &&\
