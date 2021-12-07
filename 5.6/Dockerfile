@@ -1,4 +1,4 @@
-FROM php:5.6.40-apache
+FROM arm64v8/php:5.6.40-apache
 
 RUN apt-get update &&\
     apt-get install -y libmcrypt-dev libpq-dev libpng-dev libxslt-dev cron jq logrotate unzip vim &&\
