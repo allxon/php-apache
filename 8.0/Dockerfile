@@ -1,7 +1,7 @@
 FROM php:8.0.16-apache
 
 RUN apt-get update &&\
-    apt-get install -y -qq libmcrypt-dev libpq-dev libpng-dev libxslt-dev cron jq logrotate unzip 
+    apt-get install -y -qq libmcrypt-dev libpq-dev libpng-dev libxslt-dev cron jq logrotate unzip argon2 
 
 RUN pecl install mcrypt-1.0.4
 
