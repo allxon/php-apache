@@ -2,7 +2,8 @@ FROM php:8.0.30-apache
 
 RUN apt-get update &&\
     apt-get install -y -qq libpq-dev libpng-dev libxslt-dev cron jq logrotate unzip argon2 libgmp-dev &&\
-    pecl install apcu
+    pecl install apcu &&\
+    apt-get clean
 
 RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd &&\
     docker-php-ext-enable apcu &&\
