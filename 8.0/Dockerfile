@@ -12,7 +12,7 @@ RUN mv /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurit
     mv /usr/share/coreruleset-4.0.0 /usr/share/modsecurity-crs &&\
     mv /usr/share/modsecurity-crs/crs-setup.conf.example /usr/share/modsecurity-crs/crs-setup.conf &&\
     sed -i "s/IncludeOptional \/usr\/share\/modsecurity-crs.*/IncludeOptional \/usr\/share\/modsecurity-crs\/crs-setup.conf/" /etc/apache2/mods-available/security2.conf &&\
-    sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine On/' /etc/modsecurity/modsecurity.conf &&\
+    sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine Off/' /etc/modsecurity/modsecurity.conf &&\
     sed -i 's/SecResponseBodyAccess On/SecResponseBodyAccess Off/' /etc/modsecurity/modsecurity.conf &&\
     sed -i 's/SecAuditEngine RelevantOnly/SecAuditEngine Off/' /etc/modsecurity/modsecurity.conf &&\
     sed -i 's/SecStatusEngine On/SecStatusEngine Off/' /etc/modsecurity/modsecurity.conf
