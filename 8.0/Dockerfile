@@ -6,7 +6,7 @@ RUN apt-get update &&\
     apt-get clean
 
 RUN mv /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf &&\
-    rm -f /etc/modsecurity/crs &&\
+    rm -rf /etc/modsecurity/crs &&\
     curl -s -L https://github.com/coreruleset/coreruleset/archive/refs/tags/v4.0.0.tar.gz | tar -xzf -C /usr/share/ &&\
     rm -rf /usr/share/modsecurity-crs &&\
     mv /usr/share/coreruleset-4.0.0 /usr/share/modsecurity-crs &&\
