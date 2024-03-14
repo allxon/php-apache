@@ -20,4 +20,4 @@ RUN mv /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurit
 RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd &&\
     docker-php-ext-enable apcu &&\
     docker-php-ext-install calendar exif gd gettext mysqli opcache pcntl pgsql shmop soap sockets sysvmsg sysvsem sysvshm xsl gmp
-RUN a2enmod expires headers rewrite
+RUN a2enmod expires headers rewrite remoteip

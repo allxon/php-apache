@@ -6,4 +6,4 @@ RUN apt-get update &&\
     apt-get clean &&\
     docker-php-ext-configure mysqli --with-mysqli=mysqlnd &&\
     docker-php-ext-install calendar exif gd gettext mysqli opcache pcntl pgsql shmop soap sockets sysvmsg sysvsem sysvshm wddx xmlrpc xsl
-RUN a2enmod expires headers rewrite
+RUN a2enmod expires headers rewrite remoteip
